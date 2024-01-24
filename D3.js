@@ -213,7 +213,7 @@ console.log("ES6 con FOR", crewMass);*/
 */
 
 
-const shipMass = crewMass;
+let shipMass = crewMass;
 if (shipMass < 500) {
   console.log("ES7","Ship is under loaded");
 } else if (shipMass < 700) {
