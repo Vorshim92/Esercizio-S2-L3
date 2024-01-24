@@ -175,7 +175,7 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
   break;
   }
 }
-console.log(eyeColor);
+console.log("ES5", eyeColor);
 
 
 
@@ -191,13 +191,13 @@ while (i < starWarsCharacters.length) {
   
   i++
   }
-  console.log(crewMass);
+  console.log("ES6", crewMass);
 
 /*for (let i = 0; i < starWarsCharacters.length; i++) {
   crewMass += starWarsCharacters[i].mass || 0;
   
 }
-console.log(crewMass);*/
+console.log("ES6 con FOR", crewMass);*/
 
 
 /* ESERCIZIO 7
@@ -209,14 +209,46 @@ console.log(crewMass);*/
   Se la massa è superiore a 900 e inferiore a 1000 stampa in console: "Critical Load: Over 900"
   Se la massa è superiore a 1000 stampa in console: "DANGER! OVERLOAD ALERT: escape from ship now!"
 
-  Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
+  Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso. >
 */
 
 
+const shipMass = crewMass;
+if (shipMass < 500) {
+  console.log("ES7","Ship is under loaded");
+} else if (shipMass < 700) {
+  console.log("ES7","Ship is half loaded");
+}
+else if (shipMass < 900) {
+  console.log("ES7","Warning: Load is over 700");
+}
+else if (shipMass < 1000) {
+  console.log("ES7","Critical Load: Over 900");
+}
+else if (shipMass > 1000) {
+  console.log("ES7","DANGER! OVERLOAD ALERT: escape from ship now!");
+}
+
+ 
 
 /* ESERCIZIO 8
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
 */
+
+robotArray = [];
+
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  if (starWarsCharacters[i].gender === "n/a"){
+
+    starWarsCharacters[i].gender = "robot";
+    robotArray.push(starWarsCharacters[i]);
+}
+}
+
+console.log("ES8", starWarsCharacters);
+console.log("ES8.2 - ARRAY NUOVO", robotArray);
+
+
 
 /* --EXTRA-- ESERCIZIO 9
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "charactersNames" le stringhe corrispondenti a personaggi con lo stesso nome.
