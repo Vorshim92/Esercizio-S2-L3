@@ -255,18 +255,25 @@ console.log("ES8.2 - ARRAY NUOVO", robotArray);
   Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
 */
 
-console.log("prima l'operazione - Length:", charactersNames.length);
+console.log("ES9 EXTRA","prima l'operazione - Length:", charactersNames.length);
 
 for (let y = 0; y < femaleCharacters.length; y++) {
+  const femaleName = femaleCharacters[i];
   for (let x = 0; x < charactersNames.length; x++) {
   
-if (charactersNames[x].name === femaleCharacters[y].name) {
+if (charactersNames[x] === femaleName) {
   charactersNames.splice(x, 1);
   x--;
-}}
+    }
+  }
 }
-console.log("Dopo l'operazione - Length:", charactersNames.length);
-console.log("charactersNames:", charactersNames);
+console.log("ES9 EXTRA","Nuovo characterNames senza i FemaleCharacters:", charactersNames);
+console.log("ES9 EXTRA","Dopo l'operazione - Length:", charactersNames.length);
+
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
+
+const elemento = starWarsCharacters[Math.floor(Math.random() * starWarsCharacters.length)];
+
+console.log("ES10 EXTRA", "Il nome del personaggio è " + elemento.name + " ed è nat* nel " + elemento.birth_year + " mentre il suo sesso è " + elemento.gender + ". E' alto " + elemento.height + "cm e pesa " + elemento.mass + "kg, il colore della sua pelle è " + elemento.skin_color + " mentre i suoi occhi sono di colore " + elemento.eye_color + " e il colore dei capelli è " + elemento.hair_color );
