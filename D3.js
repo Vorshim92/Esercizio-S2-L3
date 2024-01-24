@@ -146,7 +146,7 @@ const eyeColor = {
   yellow: [],
   brown: [],
   red:[],
-  blue_gray: []
+  "blue-gray": []
 }
 
 /* ESERCIZIO 5
@@ -171,7 +171,7 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
   eyeColor.red.push(starWarsCharacters[i])
   break;
   case  'blue-gray' :
-  eyeColor.blue_gray.push(starWarsCharacters[i])
+  eyeColor["blue-gray"].push(starWarsCharacters[i])
   break;
   }
 }
@@ -254,13 +254,19 @@ console.log("ES8.2 - ARRAY NUOVO", robotArray);
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "charactersNames" le stringhe corrispondenti a personaggi con lo stesso nome.
   Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
 */
-const test = [];
-for (let x = 0; x < charactersNames.length; x++) {
-  for (let y = 0; y < femaleCharacters.length; y++) {
-  }
-test
-}
 
+console.log("prima l'operazione - Length:", charactersNames.length);
+
+for (let y = 0; y < femaleCharacters.length; y++) {
+  for (let x = 0; x < charactersNames.length; x++) {
+  
+if (charactersNames[x].name === femaleCharacters[y].name) {
+  charactersNames.splice(x, 1);
+  x--;
+}}
+}
+console.log("Dopo l'operazione - Length:", charactersNames.length);
+console.log("charactersNames:", charactersNames);
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
