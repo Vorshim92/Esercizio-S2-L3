@@ -254,6 +254,12 @@ console.log("ES8.2 - ARRAY NUOVO", robotArray);
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "charactersNames" le stringhe corrispondenti a personaggi con lo stesso nome.
   Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
 */
+const test = [];
+for (let x = 0; x < charactersNames.length; x++) {
+  for (let y = 0; y < femaleCharacters.length; y++) {
+  }
+test
+}
 
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
