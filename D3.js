@@ -257,16 +257,19 @@ console.log("ES8.2 - ARRAY NUOVO", robotArray);
 
 console.log("ES9 EXTRA","prima l'operazione - Length:", charactersNames.length);
 
-for (let y = 0; y < femaleCharacters.length; y++) {
-  const femaleName = femaleCharacters[i];
-  for (let x = 0; x < charactersNames.length; x++) {
+for (let y = 0; y < charactersNames.length; y++) {
   
-if (charactersNames[x] === femaleName) {
-  charactersNames.splice(x, 1);
-  x--;
-    }
+  for (let x = 0; x < femaleCharacters.length; x++) {
+if (femaleCharacters[x].name === charactersNames[y]) {
+    charactersNames.splice(y, 1)
+     }
   }
-}
+} // QUESTO CODICE NON FUNZIONA
+
+
+// altro tentativo
+
+
 console.log("ES9 EXTRA","Nuovo characterNames senza i FemaleCharacters:", charactersNames);
 console.log("ES9 EXTRA","Dopo l'operazione - Length:", charactersNames.length);
 
